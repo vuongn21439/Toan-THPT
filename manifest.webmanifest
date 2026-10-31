@@ -1,0 +1,21 @@
+{
+  "name": "Toán THPT",
+  "short_name": "Toán THPT",
+  "description": "Luyện Toán lớp 10, 11, 12 qua trò chơi: bài học, thi thử, thử thách mỗi ngày.",
+  "lang": "vi",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0e1033",
+  "theme_color": "#0e1033",
+  "icons": [
+    {"src": "assets/icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any"},
+    {"src": "assets/icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any"},
+    {"src": "assets/icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable"}
+  ],
+  "shortcuts": [
+    {"name": "Thử thách hôm nay", "short_name": "Thử thách", "url": "./?tab=daily"},
+    {"name": "Thi thử", "short_name": "Thi thử", "url": "./?tab=mock"}
+  ]
+}

@@ -1,7 +1,7 @@
 /* Toán THPT: mở lại được khi mất mạng.
    Danh sách file lưu offline tự đọc từ index.html (thêm/xoá file script không cần sửa tay ở đây nữa).
    Chỉ xoá bộ nhớ cũ có tên bắt đầu bằng thpt- (không đụng tới app khác chạy cùng tên miền). Đổi V mỗi khi muốn ép máy học sinh tải bản mới. */
-const V='thpt-v1',
+const V='thpt-v2',
 /* file không nằm trong index.html nhưng vẫn cần khi offline (icon trong manifest) */
 EXTRA=['./','index.html','manifest.webmanifest','assets/icons/icon-192.png','assets/icons/icon-512.png','assets/icons/icon-maskable-512.png','assets/icons/apple-touch-icon.png'],
 HOSTS=['fonts.googleapis.com','fonts.gstatic.com','cdn.jsdelivr.net','www.gstatic.com'];

@@ -2,7 +2,7 @@
 
 Game luyện Toán lớp 10, 11, 12 chạy trên trình duyệt/điện thoại, cài được như app (PWA), chơi được khi mất mạng.
 Giao diện và cách chơi giống hệt app **Toán Vui Vẻ**; chỉ thay nội dung: **33 chủ đề**, mỗi chủ đề có mức **Cơ bản** và **Nâng cao**,
-hơn **700 dạng câu hỏi** sinh số ngẫu nhiên nên chơi mãi không hết đề (gồm các dạng bài trong sách bài tập và nhiều bài toán thực tế).
+hơn **850 dạng câu hỏi** sinh số ngẫu nhiên nên chơi mãi không hết đề (gồm các dạng bài trong sách bài tập và nhiều bài toán thực tế).
 
 ## Chạy thử
 Không mở file bằng cách bấm đúp (file:// chặn các module). Chạy máy chủ tĩnh trong thư mục này:
@@ -39,6 +39,13 @@ Chủ đề **Số phức** (lớp 12) có trong danh sách chủ đề được
 
 ## Các file bổ sung (bo-sung-*)
 Các file `bo-sung-*.js` viết thêm câu hỏi theo từng dạng bài của các tài liệu "Các dạng bài tập Toán 10, 11, 12" và "Bài tập toán thực tế Toán 10, 11, 12" (như quy tắc đếm, thiết diện, tiệm cận xiên, tối ưu hoá, lãi kép, vùng phủ sóng, bán rã, hạ cánh…). Mọi đề đều là câu viết mới theo dạng bài, số liệu sinh ngẫu nhiên; không sao chép nguyên văn đề trong sách.
+
+## Câu hỏi có đáp án nhiễu thiết kế và lời giải chi tiết (chi-tiet*)
+Các file `chi-tiet*.js` (126 dạng câu hỏi) dùng hàm `ZE` trong `common.js`: mỗi câu trắc nghiệm có các **đáp án nhiễu mô phỏng lỗi học sinh hay mắc** (quên đổi dấu, nhầm công thức, quên điều kiện, đảo tỉ số…). Lời giải đi **từng bước** ("Bước 1, Bước 2…"), có dòng "✅ Kết quả" và phần "⚠️ Lỗi hay gặp" giải thích vì sao từng đáp án nhiễu đang hiện trên màn hình là sai.
+
+    ZE(đề, đáp án đúng, [[đáp án sai, lý do sai], ...nhiều hơn 3 càng tốt], [bước 1, bước 2, ...])
+
+`IE(đề, đáp án, [các bước])` dùng cho câu tự nhập đáp án. Ngoài ra hàm `N` (trắc nghiệm số) đã được nâng cấp: đáp án nhiễu gồm cả các giá trị "điển hình" như số đối, gấp đôi, một nửa bên cạnh các số gần đáp án.
 
 ## Thêm câu hỏi
 Mỗi câu hỏi là một hàm trả về câu hỏi mới (số ngẫu nhiên). Trong file của lớp, thêm vào `add('mã-chủ-đề', ...)` (mức Cơ bản) hoặc `addH('mã-chủ-đề', ...)` (mức Nâng cao):
